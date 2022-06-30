@@ -1,11 +1,11 @@
 const express = require('express')
-const connectAtlasDB = require('./config/atlasDB')
+const connectLocalDB = require('./config/localMongoDB')
 require('dotenv').config()
 require('colors')
 const port = process.env.PORT
 const { errorHandler } = require('./middleware/errorMiddleware')
 
-connectAtlasDB()
+connectLocalDB()
 
 const app = express()
 
